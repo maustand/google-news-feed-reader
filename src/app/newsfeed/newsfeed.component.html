@@ -19,10 +19,13 @@
 
     <mat-card class="feed-card" *ngFor="let item of channel?.newsFeeds;">
       <mat-card-header>
-        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-title>{{ item.title }}
+
+          <img *ngIf="item.media" mat-card-image [src]=item.media.url>
+
+        </mat-card-title>
         <mat-card-subtitle>{{ item.source }} - {{ item.date }}</mat-card-subtitle>
 
-        <img *ngIf="item.media" mat-card-image [src]=item.media.url>
 
       </mat-card-header>
       <mat-card-content [innerHtml]="item.content">
