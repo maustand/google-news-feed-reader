@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  corsProxy: 'https://cors-anywhere.herokuapp.com/',
+  gnewsEntryPoint: 'https://news.google.com'
 };
 
 /*

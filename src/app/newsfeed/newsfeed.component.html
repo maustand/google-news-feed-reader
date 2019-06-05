@@ -1,0 +1,35 @@
+<section class="wrapper-newsfeed">
+
+  <div class="filter">
+
+    <mat-form-field>
+      <mat-label>Categories</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let item of categories" [value]="item.value">
+          {{item.title}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+  </div>
+
+
+  <div class="news-list">
+
+    <mat-card class="feed-card" *ngFor="let item of channel?.newsFeeds;">
+      <mat-card-header>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle>{{ item.source }} - {{ item.date }}</mat-card-subtitle>
+
+        <img *ngIf="item.media" mat-card-image [src]=item.media.url>
+
+      </mat-card-header>
+      <mat-card-content [innerHtml]="item.content">
+
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+</section>
