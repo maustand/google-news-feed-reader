@@ -9,6 +9,13 @@ section.wrapper-newsfeed {
     div.filter {
         margin-top: 100px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        mat-form-field {
+            width: 500px;
+        }
     }
     
     div.news-list {
