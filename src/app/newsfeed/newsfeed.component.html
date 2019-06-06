@@ -23,7 +23,9 @@
 
     <mat-card class="feed-card" *ngFor="let item of channel?.newsFeeds;">
       <mat-card-header>
-        <mat-card-title>{{ item.title }}
+        <mat-card-title>
+        
+          <a [href]=item.link target="_blank">{{ item.title }}</a>
 
           <img *ngIf="item.media" mat-card-image [src]=item.media.url>
 
